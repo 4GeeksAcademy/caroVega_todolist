@@ -18,7 +18,8 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgba(128, 128, 128, 0.227);
+    /*background-image: url("../img/imgbackgroundtasks.jpg");*/
+    
     width: 400px;
     min-height: 500px;
     border-radius: 5px;
@@ -30,14 +31,15 @@
     
 }
 .tasklist{
-    width: 350px;
+    width: 330px;
     min-height: 100px;
     background-color: rgb(238, 235, 235);
     display:flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid rgba(239, 239, 238, 0.296);
-    border-radius: 5px;
+    opacity: 0.6;
+    border:2px solid gray;
+    border-style: groove;
 }
 .uptask{
     width:330px;
@@ -46,12 +48,12 @@
 
 }
 .tasktext{
-    width:330px;
+    width:327px;
     display:flex;
     background-color: rgba(231, 230, 230, 0.937);
 }
 .element{
-    width: 326px;
+    width: 325px;
     min-height:30px;
     font-size: 20px;
     font-family: 'Unbounded', sans-serif;
@@ -60,11 +62,10 @@
     align-items: center;
     overflow-wrap: anywhere;
     justify-content: space-between;
-    margin-left: -30px;
-    border-bottom: 1px solid rgba(206, 204, 204, 0.937);
-    border-left: 1px solid rgba(206, 204, 204, 0.937);
-    border-right: 1px solid rgba(206, 204, 204, 0.937);
+    margin-left: -31px;
+    border-bottom: 1px solid gray;
     background-color: rgba(231, 230, 230, 0.937);
+    
 }
 .delete{
  width:25px;
@@ -76,7 +77,9 @@
 .numbertasks{
     width: 325px;
     height:47px;
-    border: 1px solid rgba(206, 204, 204, 0.937);
+    border-bottom: 1px solid gray;
+    border-left: 1px solid rgba(206, 204, 204, 0.937);
+    border-right: 1px solid rgba(206, 204, 204, 0.937);
     background-color: rgba(231, 230, 230, 0.937);
     align-content: space-between;
     display: flex;
@@ -93,27 +96,32 @@ p{
 }
 
 h1{
-    font-family: 'Unbounded', sans-serif;
-    color:rgba(195, 192, 192, 0.889);
-    font-size: 60px;
+    font-family: 'Courgette', cursive;
+    color:rgba(186, 117, 186, 0.674);
+    font-size: 70px;
+    opacity:0.7;
 }
 
 input{
     width: 325px;
     height:47px;
     background-color: rgba(231, 230, 230, 0.937);
-    border: 1px solid rgba(206, 204, 204, 0.937);
     font-size: 20px;
     font-family: 'Unbounded', sans-serif;
     color:rgb(134, 132, 132);
-    
+    border-bottom: 1px solid gray;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
 }
 
 input:focus{
     outline: none;
-    border: 1px solid rgba(206, 204, 204, 0.937);
     color:rgb(134, 132, 132);
-
+    border-bottom: 1px solid gray;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
 }
 
 ul {
@@ -121,13 +129,19 @@ ul {
     margin:0px;
 }
 
-drow1{
-    width:318px;
-    height: 10px;
-    border: 16x solid black;
+.draw1{
+    width:326px;
+    height: 5px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 2px solid gray;
+    border-style: groove;
 }
-drow2{
-    width:318px;
-    height: 10px;
-    border: 6P;
-}
+.draw2{
+    width:322px;
+    height: 5px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 2px solid gray;
+    border-style: groove;
+   }

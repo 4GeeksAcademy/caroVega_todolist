@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import {AiFillCloseCircle} from "react-icons/ai";
 
+
 const List = ( ) => {
-    const [elementlist, setElementList]=useState([]);
+    const [elementlist, setElementList]=useState(["1","2","3"]);
     const [change, setChange]= useState("");
     const [invisible, setinVisible]= useState(0)
 
@@ -33,25 +34,24 @@ function offdelete(){
 }
 	return (
             
-                <div className="tasklist pb-2">
+                <div className="tasklist" >
                     <div className="uptask">
-                        <input type="text" className="formtask mt-1 p-1" id="text" placeholder="What needs to be done?"  value={change} onKeyDown={handleKeyDown} onChange={handleOnChange}/>
+                        <input type="text" className="formtask" id="text" placeholder="What needs to be done?"  value={change} onKeyDown={handleKeyDown} onChange={handleOnChange}/>
                     </div>
                     <div className="tasktext">
                         <ul>{elementlist.map((thingdo, index)=>
-                             <div className="element  p-2"key={index} onMouseMove={activedelete} onMouseOut={offdelete} >
-                                <li >{thingdo}</li>
-                                <div className="delete mx-1" style={{opacity:invisible,}}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
+                             <div className="element py-2"key={index} onMouseMove={activedelete} onMouseOut={offdelete} >
+                                <li className="list pl-1">{thingdo}</li>
+                                <div className="delete" style={{opacity:invisible,}}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
                             </div>)}
                         </ul>
                     </div>
                     <div className="numbertasks p-1">
                         <p>{elementlist.length} item left</p>
                     </div>
-                    <div className="draw1"></div>
-                    <div className="draw2"></div>
-                   
-                </div>     
+                    
+                </div>  
+                  
         
 	);
 };
