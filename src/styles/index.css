@@ -10,3 +10,124 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.contenedor{
+    display:flex;
+    justify-content: center;
+}
+.conteinertasks{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(128, 128, 128, 0.227);
+    width: 400px;
+    min-height: 500px;
+    border-radius: 5px;
+        
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    
+}
+.tasklist{
+    width: 350px;
+    min-height: 100px;
+    background-color: rgb(238, 235, 235);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid rgba(239, 239, 238, 0.296);
+    border-radius: 5px;
+}
+.uptask{
+    width:330px;
+    display:flex;
+    justify-content: center;
+
+}
+.tasktext{
+    width:330px;
+    display:flex;
+    background-color: rgba(231, 230, 230, 0.937);
+}
+.element{
+    width: 326px;
+    min-height:30px;
+    font-size: 20px;
+    font-family: 'Unbounded', sans-serif;
+    color:rgb(134, 132, 132);
+    display:flex;
+    align-items: center;
+    overflow-wrap: anywhere;
+    justify-content: space-between;
+    margin-left: -30px;
+    border-bottom: 1px solid rgba(206, 204, 204, 0.937);
+    border-left: 1px solid rgba(206, 204, 204, 0.937);
+    border-right: 1px solid rgba(206, 204, 204, 0.937);
+    background-color: rgba(231, 230, 230, 0.937);
+}
+.delete{
+ width:25px;
+ height: 25px;
+
+}
+
+
+.numbertasks{
+    width: 325px;
+    height:47px;
+    border: 1px solid rgba(206, 204, 204, 0.937);
+    background-color: rgba(231, 230, 230, 0.937);
+    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:left;
+}
+
+p{
+    margin-top:25px;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 15px;
+    color:rgba(157, 155, 155, 0.923);
+}
+
+h1{
+    font-family: 'Unbounded', sans-serif;
+    color:rgba(195, 192, 192, 0.889);
+    font-size: 60px;
+}
+
+input{
+    width: 325px;
+    height:47px;
+    background-color: rgba(231, 230, 230, 0.937);
+    border: 1px solid rgba(206, 204, 204, 0.937);
+    font-size: 20px;
+    font-family: 'Unbounded', sans-serif;
+    color:rgb(134, 132, 132);
+    
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid rgba(206, 204, 204, 0.937);
+    color:rgb(134, 132, 132);
+
+}
+
+ul {
+   list-style: none;
+    margin:0px;
+}
+
+drow1{
+    width:318px;
+    height: 10px;
+    border: 16x solid black;
+}
+drow2{
+    width:318px;
+    height: 10px;
+    border: 6P;
+}
