@@ -40,9 +40,9 @@ function offdelete(){
                     </div>
                     <div className="tasktext">
                         <ul>{elementlist.map((thingdo, index)=>
-                             <div className="element py-2"key={index} onMouseMove={activedelete} onMouseOut={offdelete} >
+                             <div className="element py-2"  key={index} onMouseOver={activedelete} onMouseOut={offdelete} >
                                 <li className="list pl-1">{thingdo}</li>
-                                <div className="delete" style={{opacity:invisible,}}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
+                                <div className="delete" id={index} style={{opacity:invisible,}}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
                             </div>)}
                         </ul>
                     </div>
