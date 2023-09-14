@@ -18,13 +18,10 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    /*background-image: url("../img/imgbackgroundtasks.jpg");*/
-    
     width: 400px;
     min-height: 500px;
-    border-radius: 5px;
-        
 }
+
 .tasks{
     display: flex;
     flex-direction: column;
@@ -39,6 +36,7 @@
     align-items: center;
     opacity: 0.6;
     border:2px solid gray;
+    border-bottom: 3px solid gray;
     border-style: groove;
 }
 .uptask{
