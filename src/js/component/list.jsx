@@ -4,9 +4,9 @@ import {AiFillCloseCircle} from "react-icons/ai";
 
 
 const List = ( ) => {
-    const [elementlist, setElementList]=useState(["1","2","3"]);
+    const [elementlist, setElementList]=useState([]);
     const [change, setChange]= useState("");
-    const [invisible, setinVisible]= useState(0)
+    const [invisible, setinVisible]= useState([]);
 
 function  handleOnChange (e) {
     setChange(e.target.value);
@@ -24,13 +24,24 @@ function eliminartarea(param){
     setElementList(elementlist.filter(element=>element != eliminar))
     
 }
-function activedelete(){
-    console.log("invisible")
-    setinVisible(1)
+function activedelete(event){
+    const index = event._targetInst.key
+    let array = []
+    for(let i=0; i<elementlist.length; i++){
+        if(i==index){
+            array.push(1)
+        }else{array.push(0)}
+        
+    }
+    
+    setinVisible(array)
 }
 function offdelete(){
-    console.log("fuera")
-    setinVisible(0)
+    let inv=[]
+    for(let j=0; j<elementlist.length; j++){
+        inv.push(0)        
+    }
+    setinVisible(inv)
 }
 	return (
             
@@ -40,9 +51,9 @@ function offdelete(){
                     </div>
                     <div className="tasktext">
                         <ul>{elementlist.map((thingdo, index)=>
-                             <div className="element py-2"  key={index} onMouseOver={activedelete} onMouseOut={offdelete} >
+                             <div className={"element py-2 " + index} key={index} onMouseEnter={activedelete} onMouseLeave={offdelete}  >
                                 <li className="list pl-1">{thingdo}</li>
-                                <div className="delete" id={index} style={{opacity:invisible,}}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
+                                <div className="delete" id={index} style={{opacity:invisible.length != 0 ? invisible[index]:0 }}  onClick={()=>eliminartarea({index})} ><AiFillCloseCircle/></div>
                             </div>)}
                         </ul>
                     </div>
